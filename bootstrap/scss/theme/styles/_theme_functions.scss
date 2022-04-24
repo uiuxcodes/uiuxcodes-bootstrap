@@ -1,0 +1,32 @@
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem;
+$spacers: ();
+@for $i from 0 through 80 {
+  $spacers: map-merge($spacers , ($i: #{$spacer * $i*0.125}));
+}
+// @debug $spacers;
+
+$negative-spacers: if(
+  $enable-negative-margins,
+  negativify-map($spacers),
+  null
+);
+// scss-docs-end spacer-variables-maps
+
+
+// scss-docs-start border-variables
+$border-width: 1px;
+$border-widths: (
+  0: 0
+);
+@for $i from 1 through 20 {
+  $border-widths: map-merge($border-widths , ($i: #{$i + 'px'}));
+}
+// @debug $border-widths;
+// scss-docs-end border-variables

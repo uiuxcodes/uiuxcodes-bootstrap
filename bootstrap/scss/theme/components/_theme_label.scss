@@ -1,0 +1,27 @@
+//
+// Labels styles
+//
+.label {
+  color: $label-color;
+  display: inline-block;
+  font-size: $label-font-size;
+  word-break: $label-word-break;
+  font-weight: $label-font-weight;
+  text-decoration: $label-text-decoration;
+  padding: $label-padding-y $label-padding-x;
+  border-radius: $label-border-radius;
+  background-color: $label-bg-color;
+  border: 1px solid $label-border-color;
+  @include transition(all 200ms ease-in-out);
+  &.hover,
+  &:hover {
+    color: $label-hover-color;
+    border-color: $label-hover-border-color;
+    background-color: $label-hover-bg-color;
+  }
+  &.active {
+    color: $label-active-color;
+    border-color: $label-active-border-color;
+    background-color: $label-active-bg-color;
+  }
+}

@@ -1,0 +1,10 @@
+/*
+** Pagination
+** Pagination Style should be here
+*/
+
+
+.pagination-lg {
+  text-align: center;
+  .page-link { min-width: $pagination-min-width-lg; }
+}

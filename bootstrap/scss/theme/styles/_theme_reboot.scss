@@ -1,0 +1,20 @@
+html,
+body {
+  height: 100%;
+}
+.uiux-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+main {
+  flex: 1 1 auto;
+}
+
+/* h1 { line-height: $h1-line-height; }
+h2 { line-height: $h2-line-height; }
+h3 { line-height: $h3-line-height; }
+h4 { line-height: $h4-line-height; }
+h5 { line-height: $h5-line-height; }
+h6 { line-height: $h6-line-height; } */
+

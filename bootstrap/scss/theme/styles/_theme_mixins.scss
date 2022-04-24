@@ -1,0 +1,33 @@
+/*
+** Mixin
+** After Before Pseudo Elements Mixin Style
+*/
+
+%elBackgroundProperties {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+@mixin pseudo-element($pseudoType, $el-top, $el-right, $el-bottom, $el-left, $el-width, $el-height, $el-backgroundImage) {
+  &:#{$pseudoType} {
+    @if ($el-top != null) { top: $el-top; }
+    @if $el-right != null { right: $el-right; }
+    @if $el-bottom != null { bottom: $el-bottom; }
+    @if $el-left != null { left: $el-left; }
+
+    z-index: -1;
+    content: '';
+    width: $el-width;
+    height: $el-height;
+    position: absolute;
+
+    @if $el-backgroundImage != null {
+      background-image: url($el-backgroundImage);
+      @extend %elBackgroundProperties;
+    }
+    @content;
+  }
+}
+
+
+

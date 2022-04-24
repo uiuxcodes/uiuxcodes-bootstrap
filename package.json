@@ -1,0 +1,66 @@
+{
+  "name": "@uiuxcodes/bootstrap",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "bootstrap"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "npm run prepare",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build && npm run style",
+    "sass": "sass bootstrap/style.scss dist/uiuxcodes.bootstrap.css",
+    "size": "size-limit",
+    "style": "npm run sass && cssnano dist/uiuxcodes.bootstrap.css dist/uiuxcodes.bootstrap.min.css --no-zindex --no-reduceIdents",
+    "analyze": "size-limit --why"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "author": "maxifjaved",
+  "style": "dist/uiuxcodes.bootstrap.min.css",
+  "sass": "bootstrap/style.scss",
+  "module": "dist/uiuxcode.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/uiuxcode.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/uiuxcode.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "cssnano": "^5.1.7",
+    "cssnano-cli": "^1.0.5",
+    "husky": "^7.0.4",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.50.1",
+    "size-limit": "^7.0.8",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.8.1"
+  }
+}

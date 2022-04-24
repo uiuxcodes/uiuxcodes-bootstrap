@@ -1,0 +1,9 @@
+//
+// Base styles
+//
+@each $color, $value in $theme-colors {
+  .card.bg-#{$color} {
+    $card-background-color: $value;
+    color: color-contrast($card-background-color,$body-color);
+  }
+}

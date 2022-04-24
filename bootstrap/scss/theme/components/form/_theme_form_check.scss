@@ -1,0 +1,14 @@
+//
+// Switch
+//
+
+.form-switch {
+  padding-left: $form-switch-padding-start;
+
+  .form-check-input {
+    width: $form-switch-width;
+    height: $form-switch-height;
+    background-position: $form-switch-bg-position;
+    background-size: $form-switch-bg-size;
+  }
+}
