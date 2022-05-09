@@ -52,6 +52,7 @@
     "cssnano": "^5.1.7",
     "cssnano-cli": "^1.0.5",
     "husky": "^7.0.4",
+    "node-sass": "^7.0.1",
     "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
     "sass": "^1.50.1",
