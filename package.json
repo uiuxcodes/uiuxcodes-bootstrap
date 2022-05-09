@@ -17,9 +17,9 @@
     "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "tsdx build && npm run style",
-    "sass": "sass bootstrap/style.scss dist/uiuxcodes.bootstrap.css",
+    "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 bootstrap -o dist/bootstrap",
     "size": "size-limit",
-    "style": "npm run sass && cssnano dist/uiuxcodes.bootstrap.css dist/uiuxcodes.bootstrap.min.css --no-zindex --no-reduceIdents",
+    "style": "npm run css-compile && cssnano dist/bootstrap/style.css dist/bootstrap/style.min.css --no-zindex --no-reduceIdents",
     "analyze": "size-limit --why"
   },
   "husky": {
@@ -34,7 +34,7 @@
     "trailingComma": "es5"
   },
   "author": "maxifjaved",
-  "style": "dist/uiuxcodes.bootstrap.min.css",
+  "style": "dist/bootstrap/style.min.css",
   "sass": "bootstrap/style.scss",
   "module": "dist/uiuxcode.esm.js",
   "size-limit": [
