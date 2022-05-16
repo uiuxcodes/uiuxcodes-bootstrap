@@ -1,6 +1,5 @@
 {
   "name": "@uiuxcodes/bootstrap",
-  "author": "maxifjaved",
   "version": "0.0.1",
   "license": "MIT",
   "main": "dist/bootstrap/style.css",
@@ -13,6 +12,15 @@
   "engines": {
     "node": ">=14"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uiuxcodes/uiuxcodes-bootstrap.git"
+  },
+  "author": "Muhammad Asif Javed <axif.javed@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/uiuxcodes/uiuxcodes-bootstrap/issues"
+  },
+  "homepage": "https://github.com/uiuxcodes/uiuxcodes-bootstrap#readme",
   "scripts": {
     "start": "tsdx watch",
     "build": "npm run prepare",
