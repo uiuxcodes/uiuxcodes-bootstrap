@@ -1,22 +1,24 @@
 {
   "name": "@uiuxcodes/bootstrap",
+  "author": "maxifjaved",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/bootstrap/style.css",
+  "style": "dist/bootstrap/style.min.css",
+  "sass": "bootstrap/style.scss",
   "files": [
-    "dist",
+    "dist/bootstrap",
     "bootstrap"
   ],
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "scripts": {
     "start": "tsdx watch",
     "build": "npm run prepare",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "prepare": "tsdx build && npm run style",
+    "prepare": "npm run style",
     "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 bootstrap -o dist/bootstrap",
     "size": "size-limit",
     "style": "npm run css-compile && cssnano dist/bootstrap/style.css dist/bootstrap/style.min.css --no-zindex --no-reduceIdents",
@@ -33,10 +35,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "author": "maxifjaved",
-  "style": "dist/bootstrap/style.min.css",
-  "sass": "bootstrap/style.scss",
-  "module": "dist/uiuxcode.esm.js",
   "size-limit": [
     {
       "path": "dist/uiuxcode.cjs.production.min.js",
