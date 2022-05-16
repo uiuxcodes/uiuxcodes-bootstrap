@@ -19,7 +19,7 @@
 @import 'styles/theme_utilities';
 // 5. Optionally include utilities API last to generate classes based on the Sass map in.
 @import 'bootstrap/scss/utilities/api';
-@import 'bootstrap-icons/font/bootstrap-icons';
+@import 'bootstrap-icons/font/bootstrap-icons.scss';
 @import 'bootstrap/scss/bootstrap.scss';
 
 // 6. Add additional custom code here
