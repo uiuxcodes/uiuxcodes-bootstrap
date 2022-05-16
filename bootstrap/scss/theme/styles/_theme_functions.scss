@@ -7,7 +7,7 @@
 // scss-docs-start spacer-variables-maps
 $spacer: 1rem;
 $spacers: ();
-@for $i from 0 through 80 {
+@for $i from 0 through 150 {
   $spacers: map-merge($spacers , ($i: #{$spacer * $i*0.125}));
 }
 // @debug $spacers;

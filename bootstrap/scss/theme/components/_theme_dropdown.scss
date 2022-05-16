@@ -1,0 +1,5 @@
+.dropdown-menu { box-shadow: $dropdown-box-shadow; }
+.dropdown-item {
+  border-radius: $dropdown-item-border-radius;
+  @include transition (all 300ms ease-in-out)
+}

@@ -1,5 +1,5 @@
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc).
-@import 'bootstrap/scss/functions';
+@import '~bootstrap/scss/functions';
 
 // 2. Include any default variable overrides here.
 @import 'styles/theme_colors';
@@ -10,24 +10,25 @@
 @import 'styles/theme_mixins';
 
 // 3. Include remainder of required Bootstrap stylesheets.
-@import 'bootstrap/scss/variables';
-@import 'bootstrap/scss/mixins';
-@import 'bootstrap/scss/root';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
 // 4. Include any optional Bootstrap CSS as needed.
-@import 'bootstrap/scss/utilities';
+@import '~bootstrap/scss/utilities';
 
 @import 'styles/theme_utilities';
 // 5. Optionally include utilities API last to generate classes based on the Sass map in.
-@import 'bootstrap/scss/utilities/api';
-@import 'bootstrap-icons/font/bootstrap-icons.scss';
-@import 'bootstrap/scss/bootstrap.scss';
+@import '~bootstrap/scss/utilities/api';
+@import '~bootstrap-icons/font/bootstrap-icons';
+@import '~bootstrap/scss/bootstrap.scss';
 
 // 6. Add additional custom code here
 @import 'styles/theme_reboot';
 
 // 7. Base Components style files
-@import 'components/theme_card';
 @import 'components/theme_button';
+@import 'components/theme_card';
+@import 'components/theme_dropdown';
+@import 'components/form/theme_form_check';
 @import 'components/theme_label';
 @import 'components/theme_pagination';
-@import 'components/form/theme_form_check';
