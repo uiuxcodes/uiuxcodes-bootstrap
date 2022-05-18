@@ -1,6 +1,6 @@
 {
   "name": "@uiuxcodes/bootstrap",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "main": "dist/bootstrap/style.css",
   "style": "dist/bootstrap/style.min.css",
